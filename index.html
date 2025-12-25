@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portfolio – Omkar Sai Munjuluri</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel ="stylesheet" href="style.css" >
+  <script src="script.js" defer></script>
+  
+</head>
+
+<body>
+
+  <!-- HEADER / NAVBAR -->
+<header class="site-header" id="navbar">
+    <div class="header-inner">
+      <!-- Hamburger button (visible only on small screens) -->
+      <button class="menu-toggle" id="menuToggle"
+              aria-label="Toggle navigation" aria-expanded="false">
+        <span class="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <span class="menu-label">Menu</span>
+      </button>
+  
+      <!-- Main navigation -->
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About me</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          
+          <li><a href="#research">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+
+  <!-- HERO -->
+  <section class="hero light" id="hero">
+    <div class="hero-icon">💻</div>
+    <h1 class="hero-title">Omkar Sai Munjuluri 📄</h1>
+    <div class="subtitle">Data Engineer</div>
+
+    <div class="toggle-wrapper">
+      <div class="toggle" id="themeToggle">
+        <div class="toggle-circle">🦉</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+ <!-- ABOUT SECTION -->
+<section id="about" class="about-section">
+    <h2 class="section-title">ABOUT ME</h2>
+  
+    <div class="about-content">
+      <!-- LEFT: PHOTO CARD -->
+      <div class="about-card photo-card">
+        <div class="photo-frame">
+          <!-- change src to your image path -->
+          <img src="images/about_img.jpg" alt="Profile photo">
+        </div>
+  
+        <div class="tech-icons">
+          <!-- Replace icons with your own images -->
+          <img src="images/Python.png" alt="Python">
+          <img src="images/Azure.png" alt="Azure">
+          <img src="images/aws.png" alt="AWS">
+        </div>
+      </div>
+  
+      <!-- RIGHT: TEXT “WINDOW” CARD -->
+      <div class="about-card text-card">
+        <div class="window-header">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+        </div>
+  
+        <div class="window-body">
+          <p class="about-greeting">Hi :)</p>
+  
+          <p class="about-text">
+            I am a Data Engineer with 5+ years of experience building scalable data pipelines 
+            and cloud-based solutions across AWS, Azure, and big-data ecosystems. I specialize 
+            in Python, SQL, Spark, Databricks, Airflow, and modern ETL/ELT frameworks. I hold a 
+            Master’s in Information Systems from the University of Utah and have delivered 
+            high-impact projects, including optimizing financial data pipelines to 97% efficiency 
+            and automating real-time data ingestion for large healthcare workloads. With experience 
+            in data governance, pipeline automation, and analytics enablement using tools like ADF, 
+            Glue, and Power BI, I focus on creating reliable, high-quality data systems that support 
+            business growth and insight generation.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- EDUCATION DIVISION -->
+    <div id="education" class="education-wrapper">
+        <h2 class="section-title">EDUCATION</h2>
+    
+        <!-- Degree 1 -->
+        <div class="edu-card">
+        <div class="edu-header">
+            <h3>University of Utah</h3>
+            <span class="edu-dates">Aug 2023 – Dec 2024</span>
+        </div>
+    
+        <p class="edu-degree">Master of Science in Information Systems</p>
+        <p class="edu-gpa">— GPA: 3.76/4</p>
+    
+        <p class="edu-desc">
+            Course work: Database Management Systems, Data Warehouse Designing, AI for Business Process,
+            Applied Machine Learning
+        </p>
+        </div>
+    
+        <!-- Degree 2 -->
+        <div class="edu-card">
+        <div class="edu-header">
+            <h3>Jawaharlal Nehru Technological University</h3>
+            <span class="edu-dates">Aug 2016 – May 2020</span>
+        </div>
+    
+        <p class="edu-degree">Bachelor of Technology in Mechanical Engineering</p>
+        <p class="edu-gpa">— GPA: 8.92/10</p>
+    
+        <p class="edu-desc">
+            Course work: Algorithm Design & Analysis, Advanced Data Structures, Machine Learning Fundamentals,
+            Probability and Statistics, Database Management Systems, Software Engineering, Principles of Operating
+            Systems, Cloud Computing & Virtualization.
+        </p>
+        </div>
+    </div>
+<!-- EXPERIENCE DIVISION -->
+<div id="experience" class="experience-wrapper">
+    <h2 class="section-title">EXPERIENCE</h2>
+  
+    <div class="timeline">
+  
+      <!-- Timeline item 1 (LEFT) -->
+      <div class="timeline-item left">
+        <div class="timeline-badge">
+          <span>A</span>
+        </div>
+  
+        <div class="exp-card">
+          <div class="exp-pill-row">
+            <span class="exp-pill">Python</span>
+            <span class="exp-pill">Databricks</span>
+            <span class="exp-pill">Py-spark</span>
+            <span class="exp-pill">Spark-SQL</span>
+            <span class="exp-pill">ADF</span>
+            <span class="exp-pill">SSIS</span>
+            <span class="exp-pill">PowerBI</span>
+          </div>
+  
+          <h3 class="exp-title">Data Engineer</h3>
+          <p class="exp-company">Vanguard Group</p>
+  
+          <!--<div class="exp-tags">
+            <span class="exp-tag">REST API</span>
+            <span class="exp-tag">Spring Boot</span>
+            <span class="exp-tag">JavaScript</span>
+            <span class="exp-tag">Next.js</span>
+            <span class="exp-tag">Tailwind CSS</span>
+            <span class="exp-tag">PostgreSQL</span>
+            <span class="exp-tag">MongoDB</span>
+            <span class="exp-tag">AWS</span>
+            <span class="exp-tag">JWT</span>
+          </div>-->
+  
+          <p class="exp-body">
+            At The Vanguard Group, I engineered scalable data pipelines on Azure using Databricks, 
+            Spark, and ADF to integrate 10+ financial data sources and improve real-time reporting 
+            reliability. I optimized ETL workflows to 97% pipeline efficiency, implemented data 
+            deduplication, and migrated legacy SSIS processes into ADF to streamline reconciliation. 
+            I strengthened data governance with asset protection and row-level security across 
+            multiple systems. Additionally, I built Python and PySpark applications to monitor 
+            Databricks clusters, reducing manual overhead by 70% and improving system stability. 
+            These enhancements enabled seamless end-to-end data processing and real-time analytics 
+            delivery in Power BI.
+          </p>
+  
+          <p class="exp-dates-top">April 2022 – June 2023</p>
+        </div>
+      </div>
+  
+      <!-- Timeline item 2 (RIGHT) -->
+      <div class="timeline-item right">
+        <div class="timeline-badge">
+          <span>A</span>
+        </div>
+  
+        <div class="exp-card">
+          <div class="exp-pill-row">
+            <span class="exp-pill">Redshift</span>
+            <span class="exp-pill">S3</span>
+            <span class="exp-pill">Glue</span>
+            <span class="exp-pill">Kinesis</span>
+            <span class="exp-pill">Athena</span>
+            <span class="exp-pill">Lambda</span>
+            <span class="exp-pill">Apache Airflow</span>
+            <span class="exp-pill">Git</span>
+          </div>
+  
+          <h3 class="exp-title">Data Engineer</h3>
+          <p class="exp-company">Fulcrum Global Technologies</p>
+  
+          <!--<div class="exp-tags">
+            <span class="exp-tag">Azure</span>
+            <span class="exp-tag">Linux</span>
+            <span class="exp-tag">Bash</span>
+          </div>-->
+  
+          <p class="exp-body">
+            At Fulcrum Global Technologies, I engineered cloud-based data solutions by 
+            deploying AWS DMS and Redshift Spectrum to streamline large-scale data movement
+             and reduce query latency by 25%. I automated workflow orchestration using AWS Glue, 
+             Airflow, and Lambda triggers, eliminating up to 95% of manual intervention and 
+             accelerating deployments through Git and Jenkins. I supported real-time analytics 
+             by processing over one million patient appointment records via Kinesis and S3, 
+             improving data accessibility and enabling faster operational decisions. I also 
+             performed data transformations using Glue and Athena to optimize scheduling efficiency 
+             and reduce conflicts, contributing to a 35% improvement in resource management across 
+             the organization.
+          </p>
+  
+          <p class="exp-dates-bottom">July 2020 – April 2022</p>
+        </div>
+      </div>
+  
+      <!-- Timeline item 3 (LEFT) -->
+      <div class="timeline-item left">
+        <div class="timeline-badge">
+          <span>A</span>
+        </div>
+  
+        <div class="exp-card">
+          <div class="exp-pill-row">
+            <span class="exp-pill">Machine Learning</span>
+            <span class="exp-pill">Python</span>
+            <span class="exp-pill">SQL</span>
+            <span class="exp-pill">PoowerBI</span>
+          </div>
+  
+          <h3 class="exp-title">Research Analyst Intern</h3>
+          <p class="exp-company">University of Utah</p>
+  
+          <!--<div class="exp-tags">
+            <span class="exp-tag">REST API</span>
+            <span class="exp-tag">Spring Boot</span>
+            <span class="exp-tag">PostgreSQL</span>
+            <span class="exp-tag">MongoDB</span>
+            <span class="exp-tag">AWS</span>
+            <span class="exp-tag">JWT</span>
+          </div>-->
+  
+          <p class="exp-body">
+            In this role, I analyzed large-scale datasets using machine learning and 
+            predictive modeling, improving research insights by 50%. I executed complex 
+            SQL workflows for data reconciliation and quality checks across multiple databases. 
+            I built automated Power BI dashboards integrated with Python, DAX, and Power Automate, 
+            boosting reporting efficiency by 30%. I also developed advanced Excel and Power Query 
+            solutions to support research teams and conducted historical and alumni data analyses 
+            that improved decision-making by 25%. Additionally, I integrated data from Salesforce 
+            and ERP (Q360) to streamline institutional reporting and enhance engagement metrics.
+          </p>
+  
+          <p class="exp-dates-bottom">Jan 2024 – Dec 2024</p>
+        </div>
+      </div>
+  
+      <!-- TIMELINE END – sandglass -->
+      <div class="timeline-end">
+        <div class="timeline-end-badge">
+          <span>⌛</span>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  
+  
+  <!-- PROJECTS DIVISION -->
+<div id="projects" class="projects-wrapper">
+    <h2 class="section-title">PROJECTS</h2>
+  
+    <div class="projects-grid">
+      <!-- Card 1 -->
+      <div class="project-card">
+        <div class="project-image-wrapper">
+          <!-- change src paths to your images -->
+          <a href = "https://github.com/OMKARSAI-M/Loan_aproval_rate_analysis_using_Tableau.git"><img src="images/skills/loan_approval_rate_tableau.png" alt="Loan Approval Rate Using Tableau" /></a>
+          <span class="project-year">2023</span>
+        </div>
+        <h3 class="project-title">Loan Approval Rate Using Tableau</h3>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="project-card">
+        <div class="project-image-wrapper">
+          <a href="https://github.com/OMKARSAI-M/Quiz_Application_with_Database_Integration.git"><img src="images/skills/quiz.jfif" alt="Quiz" /></a>
+          <span class="project-year">2023</span>
+        </div>
+        <h3 class="project-title">Quiz - Application</h3>
+      </div>
+  
+      <!-- Card 3 -->
+      <div class="project-card">
+        <div class="project-image-wrapper">
+          <a href="https://github.com/OMKARSAI-M/Loan_Approval_Rate_Analysis.git"><img src="images/skills/powerBI.png" alt="Loan Approval Rate" /></a>
+          <span class="project-year">2023</span>
+        </div>
+        <h3 class="project-title">
+          Loan Approval Rate Using PowerBI
+        </h3>
+      </div>
+  
+      <!-- Card 4 -->
+      <div class="project-card">
+        <div class="project-image-wrapper">
+          <a href="https://youtu.be/ySfv4W-D_Bw"><img src="images/proj_4.png" alt="React Native app" /></a>
+          <span class="project-year">2022</span>
+        </div>
+        <h3 class="project-title">Responsive CSS</h3>
+      </div>
+  
+      <!-- Card 5 -->
+      <div class="project-card">
+        <div class="project-image-wrapper">
+          <a href="https://github.com/OMKARSAI-M/Sample_disney_database.git"><img src="images/Physical_model.png" alt="Disney+ Hotstar" /></a>
+          <span class="project-year">2022</span>
+        </div>
+        <h3 class="project-title">Disney+ Hotstar Sample Database</h3>
+      </div>
+  
+      <!-- Card 6 -->
+      <div class="project-card">
+        <div class="project-image-wrapper">
+          <a href="c:\Users\Omkar\Pictures\Screenshots\warehouse architect.png"><img src="images/warehouse architect.png" alt="Data Warehouse Project" /></a>
+          <span class="project-year">2021</span>
+        </div>
+        <h3 class="project-title">Data Warehouse Project</h3>
+      </div>
+    </div>
+  </div>
+<!-- SKILLS DIVISION -->
+<div id="skills" class="skills-wrapper">
+    <h2 class="section-title">SKILLS</h2>
+  
+    <div class="skills-grid">
+      <!-- Row 1 -->
+      <div class="skill-card">
+        <img src="images/skills/Databricks.png" alt="Databricks">
+        <span>Databricks</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/skills/Apache Kafka.png" alt="Kafka">
+        <span>Kafka</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/skills/Apache Airflow.png" alt="Airflow">
+        <span>Airflow</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/skills/Apache Spark.png" alt="Spark">
+        <span>Spark</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/skills/Docker.png" alt="Docker">
+        <span>Docker</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/skills/Git.png" alt="Git">
+        <span>Git</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/skills/icons8-snowflake-50.png" alt="Snowflake">
+        <span>Snowflake</span>
+      </div>
+  
+      <!-- Row 2 -->
+      <div class="skill-card">
+        <img src="images/skills/icons8-power-bi-logo-50.png" alt="PowerBI">
+        <span>PowerBI</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/skills/icons8-tableau-software-50.png" alt="Tableau">
+        <span>Tableau</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/skills/Azure.png" alt="Azure">
+        <span>Azure</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/skills/aws.png" alt="AWS">
+        <span>AWS</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/skills/icons8-google-cloud-48.png" alt="GCP">
+        <span>GCP</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/skills/Apache Hadoop.png" alt="Hadoop">
+        <span>Hadoop</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/skills/Python.png" alt="Python">
+        <span>Python</span>
+      </div>
+  
+      <!-- Row 3 -->
+      <div class="skill-card">
+        <img src="images/skills/Java.png" alt="Java">
+        <span>Java</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/skills/MySQL.png" alt="MySQL">
+        <span>MySQL</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/skills/HTML5.png" alt="HTML">
+        <span>HTML</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/skills/CSS3.png" alt="CSS 3">
+        <span>CSS 3</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/skills/JavaScript.png" alt="JavaScript">
+        <span>JavaScript</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/skills/jQuery.png" alt="jQuery">
+        <span>jQuery</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/skills/Bootstrap.png" alt="Bootstrap">
+        <span>Bootstrap</span>
+      </div>
+  
+      <!-- Row 4 -->
+      <div class="skill-card">
+        <img src="images/skills/MongoDB.png" alt="MongoDB">
+        <span>MongoDB</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/skills/YAML.png" alt="YAML">
+        <span>YAML</span>
+      </div>
+    </div>
+  </div>
+   <!-- CONTACT DIV -->
+<div id="contact" class="contact-container">
+    <h2 class="contact-title">CONTACT</h2>
+  
+    <div class="contact-box">
+      <p class="contact-intro">
+        Have a project, question, or just want to say hi?  
+        Send me a message and I’ll get back to you soon!
+      </p>
+  
+      <form id="contactForm"
+            action="https://formspree.io/f/maqwgqej"
+            method="POST"
+            class="contact-form">
+  
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required placeholder="Your name" />
+        </div>
+  
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com" />
+        </div>
+  
+        <div class="form-row">
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" placeholder="What is this about?" />
+        </div>
+  
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required
+                    placeholder="Write your message here..."></textarea>
+        </div>
+  
+        <button type="submit" class="btn-primary">Send Message</button>
+  
+        <p id="formStatus" class="form-status"></p>
+      </form>
+    </div>
+  </div>
+   
+  
+  </section>
+  
+
+  <!-- Dummy sections -->
+  <section id="education"></section>
+  <section id="experience"></section>
+  <section id="skills"></section>
+  <section id="projects"></section>
+  <section id="research"></section>
+
+  <script>
+ 
+
+  </script>
+
+</body>
+</html>

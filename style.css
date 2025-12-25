@@ -1,0 +1,1118 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    /* ======== HEADER / NAVBAR ======== */
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    transition: background 0.3s ease;
+  }
+  
+  .site-header.dark {
+    background-color: #2b2b2b;
+    color: #ffffff;
+  }
+  
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* MAIN NAV (desktop) */
+  .main-nav {
+    flex: 1;
+  }
+  
+  .main-nav ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+  }
+  
+  .main-nav li {
+    flex: 1 1 0;
+    text-align: center;
+  }
+  
+  .main-nav a {
+    display: block;
+    padding: 0.4rem 0.25rem;
+    text-decoration: none;
+    color: #222222;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    transition: color 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .main-nav a:hover {
+    color: #0077b6;
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+  
+  .site-header.dark .main-nav a {
+    color: #ffffff;
+  }
+  
+  .site-header.dark .main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+  
+  /* HAMBURGER BUTTON (hidden on desktop) */
+  .menu-toggle {
+    display: none;             /* we show it only on small screens */
+    align-items: center;
+    gap: 0.4rem;
+    border: none;
+    background: transparent;
+    font-size: 0.95rem;
+    cursor: pointer;
+    color: #222222;
+  }
+  
+  .site-header.dark .menu-toggle {
+    color: #ffffff;
+  }
+  
+  .menu-icon {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+  }
+  
+  .menu-icon span {
+    width: 16px;
+    height: 2px;
+    background-color: currentColor;
+    border-radius: 2px;
+  }
+  
+  .menu-label {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  
+  /* ======== MOBILE LAYOUT ======== */
+  /* Change 900px to whatever breakpoint you prefer */
+  @media (max-width: 900px) {
+    .header-inner {
+      justify-content: space-between;
+    }
+  
+    /* show hamburger, hide full nav initially */
+    .menu-toggle {
+      display: flex;
+    }
+  
+    .main-nav {
+      position: fixed;
+      top: 56px;       /* just below the header */
+      left: 0;
+      right: 0;
+      background-color: #ffffff;
+      border-bottom: 1px solid #e5e5e5;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.28s ease;
+    }
+  
+    .site-header.dark .main-nav {
+      background-color: #2b2b2b;
+      border-bottom-color: #444444;
+    }
+  
+    .main-nav ul {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .main-nav li {
+      flex: 0 0 auto;
+      text-align: left;
+    }
+  
+    .main-nav a {
+      padding: 0.7rem 1.1rem;
+    }
+  
+    /* when nav is open */
+    .main-nav.open {
+      max-height: 320px;    /* enough to show all items */
+    }
+  }
+  
+    /* ---------------- HERO SECTION ---------------- */
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 90px;
+      text-align: center;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .hero.light {
+      background-color: #2bb8d2;
+      color: #222;
+    }
+
+    .hero.dark {
+      background-color: #555;
+      color: white;
+    }
+
+    .hero-icon {
+      font-size: 4.5rem;
+      margin-bottom: 1.5rem;
+      opacity: 0.8;
+    }
+
+    .hero-title {
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin-top: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      letter-spacing: 2px;
+      margin-top: 8px;
+      opacity: 0.85;
+    }
+
+    /* ---------------- TOGGLE BUTTON ---------------- */
+    .toggle-wrapper {
+      margin-top: 25px;
+    }
+
+    .toggle {
+      position: relative;
+      width: 100px;
+      height: 45px;
+      background-color: #008ca5;
+      border-radius: 40px;
+      border: 2px solid #c9ad6c;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .toggle.dark {
+      background-color: #333;
+      border-color: #888;
+    }
+
+    .toggle-circle {
+      position: absolute;
+      top: 50%;
+      left: 4px;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      transition: left 0.3s ease;
+    }
+
+    .toggle.dark .toggle-circle {
+      left: calc(100% - 34px);
+    }
+
+    /* ---------------- ABOUT HEADER ---------------- */
+  /* ===== ABOUT SECTION ===== */
+
+.about-section {
+    padding: 5rem 1rem 4rem;
+    background-color: #ffffff;
+  }
+  
+  .section-title {
+    text-align: center;
+    letter-spacing: 0.25em;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+  }
+  
+  .about-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+    align-items: stretch;
+  }
+  
+  /* Shared card style */
+  .about-card {
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* LEFT CARD */
+  .photo-card {
+    flex: 0 0 260px;
+    padding: 2rem 2rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .photo-frame {
+    border: 3px solid #000000;
+    padding: 0.75rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .photo-frame img {
+    display: block;
+    width: 180px;
+    height: auto;
+  }
+  
+  .tech-icons {
+    margin-top: 0.7rem;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tech-icons img {
+    width: 38px;
+    height: auto;
+  }
+  
+  /* RIGHT CARD – window style */
+  .text-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .window-header {
+    height: 32px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #f8f8f8;
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    align-items: center;
+    padding-left: 0.75rem;
+    gap: 0.4rem;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .dot-red    { background-color: #ff5f57; }
+  .dot-yellow { background-color: #febc2e; }
+  .dot-green  { background-color: #28c840; }
+  
+  .window-body {
+    padding: 1.5rem 1.75rem 1.75rem;
+    border-radius: 0 0 4px 4px;
+    background-color: #ffffff;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    color: #333333;
+  }
+  
+  .about-greeting {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .about-text {
+    text-align: justify;
+  }
+  
+  /* ===== DARK MODE VARIATION (triggered by JS) ===== */
+  
+  .about-section.dark {
+    background-color: #847878;
+  }
+  
+  .about-section.dark .about-card {
+    background-color: #666666;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
+  }
+  
+  .about-section.dark .window-header {
+    background-color: #4a4a4a;
+    border-bottom-color: #555555;
+  }
+  
+  .about-section.dark .window-body {
+    background-color: #666666;
+    color: #f5f5f5;
+  }
+  
+  .about-section.dark .about-text {
+    color: #f5f5f5;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .about-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .photo-card {
+      width: 100%;
+      max-width: 320px;
+    }
+  
+    .text-card {
+      width: 100%;
+    }
+  }
+  
+
+    /* --------- RESPONSIVE NAV --------- */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-wrap: wrap;
+      }
+
+      /* 2 items per row on small screens */
+      nav li {
+        flex: 1 1 50%;
+      }
+
+      nav a {
+        padding: 0.45rem 0.25rem;
+      }
+    }
+    /* ---------- EDUCATION DIVISION ---------- */
+
+.education-wrapper {
+    margin-top: 50px;
+    padding: 5rem 1rem 4rem;
+    background-color: #111111;   /* dark band behind cards */
+  }
+  
+  /* reuse same heading style, but make it white in this div */
+  .section-title {
+    text-align: center;
+    letter-spacing: 0.25em;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+  }
+  
+  .education-wrapper .section-title {
+    color: #ffffff;
+  }
+  
+  /* Card appearance */
+  .edu-card {
+    max-width: 900px;
+    margin: 1.5rem auto;
+    padding: 1.6rem 2rem;
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  }
+  
+  .edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .edu-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .edu-dates {
+    font-size: 0.95rem;
+    color: #555555;
+  }
+  
+  .edu-degree {
+    margin-top: 0.4rem;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .edu-gpa {
+    margin: 0.4rem 0 0.8rem;
+    font-size: 0.9rem;
+    color: #777777;
+  }
+  
+  .edu-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  /* Responsive layout */
+  @media (max-width: 700px) {
+    .edu-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.15rem;
+    }
+  }
+/* ========== EXPERIENCE DIVISION ========== */
+
+.experience-wrapper {
+    padding: 5rem 1rem 5rem;
+    background-color: #2bb8d2;          /* light theme */
+    transition: background-color 0.3s ease;
+  }
+  
+  .experience-wrapper.dark {
+    background-color: #555555;          /* dark theme */
+  }
+  
+  .experience-wrapper .section-title {
+    text-align: center;
+    letter-spacing: 0.25em;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+  }
+  
+  /* ---------- Timeline layout ---------- */
+  
+  .timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem 0 5rem;   /* bottom padding for sandglass */
+  }
+  
+  .timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 16px;          /* line now stops at bottom of hourglass */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background-color: #dddddd;
+  }  
+  
+  .experience-wrapper.dark .timeline::before {
+    background-color: #e2e2e2;
+  }
+  
+  /* each item – also used for scroll-reveal */
+  .timeline-item {
+    position: relative;
+    margin: 1.5rem 0 2.3rem;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* circle badge */
+  .timeline-badge {
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #f2f2f2;
+    border: 4px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #555555;
+    z-index: 2;
+  }
+  
+  .experience-wrapper.dark .timeline-badge {
+    background-color: #666666;
+    border-color: #dddddd;
+    color: #ffffff;
+  }
+  
+  /* ---------- Experience card ---------- */
+  
+  .exp-card {
+    position: relative;               /* needed for triangle connector */
+    max-width: 450px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+    padding: 1.1rem 1.4rem 1.3rem;
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+  
+  /* left vs right alignment */
+  .timeline-item.left  .exp-card { margin-right: auto;  margin-left: 0; }
+  .timeline-item.right .exp-card { margin-left:  auto;  margin-right: 0; }
+  
+  /* ---------- Triangle connector from badge to card ---------- */
+  
+  /* Left item – triangle from card’s right edge toward center line */
+  .timeline-item.left .exp-card::after {
+    content: "";
+    position: absolute;
+    top: 40px;                /* align with badge center */
+    right: -16px;             /* sticks out toward the line */
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 0 8px 16px;
+    border-color: transparent transparent transparent #ffffff;
+  }
+  
+  /* Right item – triangle from card’s left edge toward center line */
+  .timeline-item.right .exp-card::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: -16px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #ffffff transparent transparent;
+  }
+  
+  .experience-wrapper.dark .exp-card {
+    background-color: #f2f2f2;
+  }
+  
+  .experience-wrapper.dark .timeline-item.left .exp-card::after {
+    border-color: transparent transparent transparent #f2f2f2;
+  }
+  
+  .experience-wrapper.dark .timeline-item.right .exp-card::after {
+    border-color: transparent #f2f2f2 transparent transparent;
+  }
+  
+  /* ---------- Content inside card ---------- */
+  
+  .exp-pill-row {
+    margin-bottom: 0.6rem;
+  }
+  
+  .exp-pill {
+    display: inline-block;
+    margin: 0 0.25rem 0.25rem 0;
+    padding: 0.15rem 0.5rem;
+    font-size: 0.72rem;
+    border-radius: 12px;
+    background-color: #cda34f;
+    color: #ffffff;
+  }
+  
+  .experience-wrapper.dark .exp-pill {
+    background-color: #777777;
+  }
+  
+  .exp-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+  }
+  
+  .exp-company {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .exp-tags {
+    margin: 0.3rem 0 0.7rem;
+  }
+  
+  .exp-tag {
+    display: inline-block;
+    margin: 0 0.25rem 0.25rem 0;
+    padding: 0.12rem 0.45rem;
+    font-size: 0.68rem;
+    border-radius: 10px;
+    border: 1px solid #e0c57f;
+    color: #7c5a1a;
+  }
+  
+  .experience-wrapper.dark .exp-tag {
+    border-color: #bfbfbf;
+    color: #444444;
+  }
+  
+  .exp-body {
+    font-size: 0.82rem;
+    line-height: 1.45;
+    text-align: justify;
+    margin-bottom: 0.6rem;
+  }
+  
+  .exp-dates-top,
+  .exp-dates-bottom {
+    font-size: 0.75rem;
+    color: #555555;
+    text-align: right;
+    margin-top: 0.3rem;
+    opacity: 0.8;
+  }
+  
+  .experience-wrapper.dark .exp-dates-top,
+  .experience-wrapper.dark .exp-dates-bottom {
+    color: #333333;
+  }
+  
+  /* ---------- Timeline end – sandglass ---------- */
+  
+  .timeline-end {
+    position: relative;
+    height: 80px;           /* space for the end badge */
+  }
+  
+  .timeline-end-badge {
+    position: absolute;
+    left: 50%;
+    top: 40px;              /* same offset used in ::before bottom */
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #f2f2f2;
+    border: 4px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #555555;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+  
+  .experience-wrapper.dark .timeline-end-badge {
+    background-color: #666666;
+    border-color: #dddddd;
+    color: #ffffff;
+  }
+  
+  /* ---------- Responsive ---------- */
+  
+  @media (max-width: 900px) {
+    .timeline::before {
+      left: 16px;
+      transform: translateX(0);
+    }
+  
+    .timeline-badge {
+      left: 16px;
+      transform: translate(-50%, -50%);
+    }
+  
+    .timeline-item.left .exp-card,
+    .timeline-item.right .exp-card {
+      margin: 1.4rem 0 1.4rem 48px;   /* all cards on right of line */
+    }
+  
+    .timeline-item.left .exp-card::after,
+    .timeline-item.right .exp-card::after {
+      left: -16px;
+      right: auto;
+      border-width: 8px 16px 8px 0;
+      border-color: transparent #ffffff transparent transparent;
+    }
+  
+    .experience-wrapper.dark .timeline-item.left .exp-card::after,
+    .experience-wrapper.dark .timeline-item.right .exp-card::after {
+      border-color: transparent #f2f2f2 transparent transparent;
+    }
+  
+    .timeline-end-badge {
+      left: 16px;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  
+  /* ========== PROJECTS DIVISION ========== */
+
+.projects-wrapper {
+    padding: 5rem 1rem 5rem;
+    background-color: #ffffff;
+  }
+  
+  /* if you want dark-mode later, you can use this class */
+  .projects-wrapper.dark {
+    background-color: #1f1f1f;
+  }
+  
+  .projects-wrapper .section-title {
+    text-align: center;
+    letter-spacing: 0.25em;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+  }
+  
+  /* Grid of cards */
+  .projects-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.5rem;
+  }
+  
+  /* Individual project card */
+  .project-card {
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    cursor: pointer;
+    transform: translateY(0) scale(1);
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      background-color 0.25s ease;
+  }
+  
+  /* Hover effect – slightly larger with stronger shadow */
+  .project-card:hover {
+    transform: translateY(-10px) scale(1.04);
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Image area */
+  .project-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+  }
+  
+  .project-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Year badge */
+  .project-year {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: -14px; /* overlaps bottom border a bit */
+    padding: 0.1rem 0.8rem;
+    background-color: #b3b0b0;
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 4px;
+  }
+  
+  /* Title text */
+  .project-title {
+    padding: 2.2rem 1.4rem 1.3rem; /* extra top to account for year badge */
+    font-size: 0.9rem;
+    text-align: center;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  
+  /* Optional: dark mode card text */
+  .projects-wrapper.dark .project-card {
+    background-color: #2b2b2b;
+    color: #ffffff;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.8rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .projects-grid {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+  /* ========== SKILLS DIVISION ========== */
+
+.skills-wrapper {
+    padding: 5rem 1rem 5rem;
+    background-color: #111111;   /* dark band */
+    color: #ffffff;
+  }
+  
+  .skills-wrapper .section-title {
+    text-align: center;
+    letter-spacing: 0.25em;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    color: #ffffff;
+  }
+  
+  /* Grid of skill tiles */
+  .skills-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.4rem;
+  }
+  
+  /* Individual skill tile */
+  .skill-card {
+    width: 110px;
+    height: 110px;
+    background-color: #222222;
+    border-radius: 8px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.45);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    text-align: center;
+    font-size: 0.78rem;
+    cursor: default;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      background-color 0.2s ease;
+  }
+  
+  /* Hover: tiny lift like in screenshot */
+  .skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.65);
+    background-color: #262626;
+  }
+  
+  /* Icon styling */
+  .skill-card img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    margin-bottom: 0.1rem;
+    /* If your icons are colored, this makes them white-ish; remove if you already have white icons */
+    filter: invert(1) grayscale(1) brightness(1.4);
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .skill-card {
+      width: 95px;
+      height: 95px;
+      font-size: 0.7rem;
+    }
+  }
+  
+  /* ========= CONTACT DIV (Theme 1 Colors) ========= */
+
+.contact-container {
+    padding: 5rem 1rem 5rem;
+    background-color: #f4f1ee; /* Theme 1 light background */
+  }
+  
+  .contact-title {
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 0.25em;
+    margin-bottom: 2.5rem;
+    color: #222222;
+    text-transform: uppercase;
+  }
+  
+  .contact-box {
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  }
+  
+  .contact-intro {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    color: #555555;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-row label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #333333;
+    margin-bottom: 4px;
+  }
+  
+  .form-row input,
+  .form-row textarea {
+    padding: 0.65rem 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #e0dfdf;
+    font-size: 0.95rem;
+    background-color: #ffffff;
+    color: #222222;
+    transition: 0.18s ease;
+  }
+  
+  .form-row input::placeholder,
+  .form-row textarea::placeholder {
+    color: #aaaaaa;
+  }
+  
+  .form-row input:focus,
+  .form-row textarea:focus {
+    outline: none;
+    border-color: #6c63ff;
+    box-shadow: 0 0 0 2px #e5e3ff;
+  }
+  
+  /* Submit Button */
+  .btn-primary {
+    align-self: flex-start;
+    padding: 0.55rem 1.5rem;
+    border-radius: 999px;
+    background-color: #2bb8d2;
+    color: white;
+    border: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(108, 99, 255, 0.35);
+    transition: 0.2s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #52eff2;
+    box-shadow: 0 10px 22px rgba(108, 99, 255, 0.45);
+    transform: translateY(-1px);
+  }
+  
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+  
+  /* Status Text */
+  .form-status {
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+    color: #555555;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .contact-box {
+      padding: 1.6rem;
+    }
+  }
+  /* ========= CONTACT DIV — DARK THEME ========= */
+
+.contact-container.dark {
+    background-color: #3b3a3b; /* Theme 1 dark background */
+  }
+  
+  .contact-container.dark .contact-title {
+    color: #ffffff; /* Title in pure white */
+  }
+  
+  .contact-container.dark .contact-box {
+    background-color: #3b3a3b;   /* SAME as container */
+    box-shadow: none;            /* optional: remove light shadow */
+    border: 1px solid #5b595b;   /* subtle border */
+  }
+  
+  .contact-container.dark .contact-intro {
+    color: #e0e0e0; /* lighter text */
+  }
+  
+  .contact-container.dark label {
+    color: #ffffff; /* white labels */
+  }
+  
+  .contact-container.dark input,
+  .contact-container.dark textarea {
+    background-color: #4a484a;   /* dark surface */
+    color: #ffffff;              /* white text */
+    border: 1px solid #6b63ff;   /* themed purple border */
+  }
+  
+  .contact-container.dark input::placeholder,
+  .contact-container.dark textarea::placeholder {
+    color: #c9c9c9; /* soft grey placeholder */
+  }
+  
+  .contact-container.dark input:focus,
+  .contact-container.dark textarea:focus {
+    border-color: #b8a9ff;          /* lighter purple accent */
+    box-shadow: 0 0 0 2px #6b63ff;  /* purple glow */
+  }
+  
+  .contact-container.dark .btn-primary {
+    background-color: #6b63ff;
+    color: #ffffff;
+    box-shadow: 0 6px 14px rgba(108, 99, 255, 0.35);
+  }
+  
+  .contact-container.dark .btn-primary:hover {
+    background-color: #5b52f2;
+    box-shadow: 0 10px 22px rgba(108, 99, 255, 0.55);
+  }
+  
+  .contact-container.dark .form-status {
+    color: #e0e0e0;
+  }
+  
